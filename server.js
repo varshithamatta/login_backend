@@ -6,7 +6,7 @@ const authRoutes = require('./routes/auth');
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({origin: 'https://login-frontend-gbcn.onrender.com',credentials: true}));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
